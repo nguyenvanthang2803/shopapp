@@ -1,6 +1,5 @@
 package com.shopapp.shopapp.controller;
 
-import com.shopapp.shopapp.dto.request.OrderDto;
 import com.shopapp.shopapp.dto.request.OrderRequestDto;
 import com.shopapp.shopapp.model.Orders;
 import com.shopapp.shopapp.services.OrderService;
@@ -12,7 +11,6 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("${api.prefix}/orders")

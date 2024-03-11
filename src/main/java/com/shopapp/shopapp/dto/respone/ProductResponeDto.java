@@ -1,10 +1,7 @@
 package com.shopapp.shopapp.dto.respone;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.shopapp.shopapp.model.Products;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

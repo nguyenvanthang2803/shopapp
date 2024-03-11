@@ -81,10 +81,10 @@ public class ProductController {
     public ResponseEntity<?> uploadImage(
             @PathVariable("id") Long productId,
             @ModelAttribute("files")List<MultipartFile> files
-    ) throws IOException {
+    ) {
         try {
             Products existingProduct = productService.getProductById(productId);
-           files = files ==null? new ArrayList<MultipartFile>():files;
+           files = files ==null? new ArrayList<>():files;
            List<ProductImage> productImageList = new ArrayList<>();
             for (MultipartFile file : files) {
                 if(file.getSize()==0){
@@ -114,7 +114,7 @@ public class ProductController {
         }
     private String storeFile(MultipartFile file) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        String uniqueFileName = UUID.randomUUID().toString()+"_"+fileName;
+        String uniqueFileName = UUID.randomUUID() +"_"+fileName;
         Path uploadDir = Paths.get("uploads");
         if(!Files.exists(uploadDir)){
             Files.createDirectories(uploadDir);
