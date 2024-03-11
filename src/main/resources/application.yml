@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  datasource:
+    username: thang
+    password: 123456
+    url: jdbc:postgresql://postgres_container:5432/shopapp
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+api:
+  prefix: api/v1
+jwt:
+  expiration: 2592000
+  secretKey: I don't know what i'm gonna do right now @@
